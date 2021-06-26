@@ -5,6 +5,8 @@
 
 Widnows 10 64Bit/MSYS2/MingW64
 
+大部分都提供静态库和动态链接库两种, 少数编译动态链接库出错无法编译, 只提供静态库
+
 [FFTW3](http://www.fftw.org/)
 FFTW ( the Faster Fourier Transform in the West) 是一个快速计算离散傅里叶变换的标准C语言程序集，其由MIT的M.Frigo 和S. Johnson 开发。可计算一维或多维实和复数据以及任意规模的DFT。
 FFTW 还包含对共享和分布式存储系统的并行变换，它可自动适应你的机器， 缓存，存储器大小，寄存器个数。
@@ -19,7 +21,7 @@ GSL（GNU Scientific Library）是一个应用广泛的C/C++科学计算库，�
 [LAPACK](https://www.netlib.org/lapack/)
 LAPACK，其名为Linear Algebra PACKage的缩写，是一以Fortran编程语言写就，用于数值计算的函式集。 LAPACK提供了丰富的工具函式，可用于诸如解多元线性方程式、线性系统方程组的最小平方解、计算特征向量、用于计算矩阵QR分解的Householder转换、以及奇异值分解等问题。 在NetLib亦提供了API经简化的Fortran 95版本的LAPACK95。LAPACK以BSD授权的方法释出。
 
-[ITPP](http://itpp.sourceforge.net/4.3.1/index.html)
+[ITPP](http://itpp.sourceforge.net/4.3.1/)
 
 IT++ 是一个包含数学、信号处理和通信类和函数的 C++ 库。它的主要用途是模拟通信系统和进行通信领域的研究。该库的内核由通用向量和矩阵类以及一组随附的例程组成。这样的内核使 IT++ 类似于MATLAB、GNU Octave或SciPy。
 
