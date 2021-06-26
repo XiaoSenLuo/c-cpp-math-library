@@ -1,0 +1,9 @@
+libdir=C:/Program Files (x86)/LAPACK/lib
+includedir=C:/Program Files (x86)/LAPACK/include
+
+Name: LAPACK
+Description: FORTRAN reference implementation of LAPACK Linear Algebra PACKage
+Version: 3.9.1
+URL: http://www.netlib.org/lapack/
+Libs: -L${libdir} -llapack
+Requires.private: blas

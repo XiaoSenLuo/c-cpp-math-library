@@ -1,0 +1,10 @@
+libdir=C:/Program Files (x86)/LAPACK/lib
+includedir=C:/Program Files (x86)/LAPACK/include
+
+Name: LAPACKE
+Description: C Standard Interface to LAPACK Linear Algebra PACKage
+Version: 3.9.1
+URL: http://www.netlib.org/lapack/#_standard_c_language_apis_for_lapack
+Libs: -L${libdir} -llapacke64
+Cflags: -I${includedir}
+Requires.private: lapack64
