@@ -39,3 +39,5 @@ IT++ 广泛使用现有的开源或商业库，以提高功能、速度和准确
 ##### 本仓库编译的ITPP依赖外部库为 FFTW3, LAPACK, BLAS, 并未使用MKL(收费), ACML, ATLAS
 
 
+[BLAS](https://www.netlib.org/blas/)
+BLAS（基本线性代数子程序）是为执行基本向量和矩阵运算提供标准构建块的例程。Level 1 BLAS 执行标量、向量和向量-向量运算，Level 2 BLAS 执行矩阵-向量运算，Level 3 BLAS 执行矩阵-矩阵运算。由于 BLAS 高效、便携且广泛可用，因此它们通常用于开发高质量的线性代数软件，例如LAPACK。
