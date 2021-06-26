@@ -1,0 +1,11 @@
+prefix=D:/UserTemp/gsl-2.7/library
+exec_prefix=D:/UserTemp/gsl-2.7/library
+libdir=D:/UserTemp/gsl-2.7/library/lib
+includedir=D:/UserTemp/gsl-2.7/library/include
+GSL_CBLAS_LIB=-lgslcblas
+
+Name: GSL
+Description: GNU Scientific Library
+Version: 2.7
+Libs: -LD:/UserTemp/gsl-2.7/library/lib -lgsl ${GSL_CBLAS_LIB} -lm -lm 
+Cflags: -ID:/UserTemp/gsl-2.7/library/include
