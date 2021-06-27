@@ -1,4 +1,5 @@
-/* itpp/config.h.cmake  used by cmake to generate config.h  */
+/* itpp/config.h.  Generated from config.h.in by configure.  */
+/* itpp/config.h.in.  Generated from configure.ac by autoheader.  */
 
 
 #ifndef CONFIG_H
@@ -21,23 +22,23 @@
 /* Define to 1 if you have the `atanh' function. */
 /* #undef HAVE_ATANH */
 
+#if defined(HAVE_ACML) || defined(HAVE_MKL)
 /* Define if you have a BLAS library. */
-#define HAVE_BLAS
+#  define HAVE_BLAS 1
+#endif
 
-/* Define if you have ACML library for Windows (TODO: remove this) */
-/* #undef HAVE_ACML */
-
+#ifdef HAVE_ACML
 /* Define if you have an ACML BLAS library. */
-/* #undef HAVE_BLAS_ACML */
+#  define HAVE_BLAS_ACML 1
+#endif
 
 /* Define if you have an ATLAS BLAS library. */
 /* #undef HAVE_BLAS_ATLAS */
 
-/* Define if you have MKL library for Windows (TODO: remove this) */
-/* #undef HAVE_MKL */
-
+#ifdef HAVE_MKL
 /* Define if you have an MKL BLAS library. */
-/* #undef HAVE_BLAS_MKL */
+#  define HAVE_BLAS_MKL 1
+#endif
 
 /* Define to 1 if you have the `cbrt' function. */
 /* #undef HAVE_CBRT */
@@ -50,22 +51,22 @@
 
 /* Define to 1 if you have the declaration of `isfinite', and to 0 if you
    don't. */
-/* #undef HAVE_DECL_ISFINITE */
+#define HAVE_DECL_ISFINITE 0
 
 /* Define to 1 if you have the declaration of `isinf', and to 0 if you don't.
    */
-/* #undef HAVE_DECL_ISINF */
+#define HAVE_DECL_ISINF 0
 
 /* Define to 1 if you have the declaration of `isnan', and to 0 if you don't.
    */
-/* #undef HAVE_DECL_ISNAN */
+#define HAVE_DECL_ISNAN 0
 
 /* Define to 1 if you have the declaration of `signgam', and to 0 if you
    don't. */
-/* #undef HAVE_DECL_SIGNGAM */
+#define HAVE_DECL_SIGNGAM 0
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
-/* #undef HAVE_DLFCN_H */
+#define HAVE_DLFCN_H 1
 
 /* Define to 1 if you have the `erf' function. */
 /* #undef HAVE_ERF */
@@ -76,41 +77,52 @@
 /* Define to 1 if you have the `expm1' function. */
 /* #undef HAVE_EXPM1 */
 
+/* Define if the compiler supports extern template */
+/* #undef HAVE_EXTERN_TEMPLATE */
+
+#if defined(HAVE_ACML) || defined(HAVE_MKL)
 /* Define if you have FFT library. */
-#define HAVE_FFT
+#  define HAVE_FFT 1
+#endif
 
 /* Define if you have FFTW3 library. */
-#define HAVE_FFTW3
+/* #undef HAVE_FFTW3 */
 
+#ifdef HAVE_ACML
 /* Define if you have ACML FFT library. */
-/* #undef HAVE_FFT_ACML */
+#  define HAVE_FFT_ACML 1
+#endif
 
+#ifdef HAVE_MKL
 /* Define if you have MKL FFT library. */
-/* #undef HAVE_FFT_MKL */
+#  define HAVE_FFT_MKL 1
+#endif
 
 /* Define to 1 if you have the `finite' function. */
-/* #undef HAVE_FINITE */
+#define HAVE_FINITE 1
 
 /* Define to 1 if you have the `fpclass' function. */
-/* #undef HAVE_FPCLASS */
+#define HAVE_FPCLASS 1
 
 /* Define to 1 if you have the <ieeefp.h> header file. */
 /* #undef HAVE_IEEEFP_H */
 
 /* Define to 1 if you have the <inttypes.h> header file. */
-#define HAVE_INTTYPES_H 1
+/* #undef HAVE_INTTYPES_H */
 
 /* Define to 1 if you have the `isfinite' function. */
-/* #undef HAVE_ISFINITE */
+#define HAVE_ISFINITE 1
 
 /* Define to 1 if you have the `isinf' function. */
 /* #undef HAVE_ISINF */
 
 /* Define to 1 if you have the `isnan' function. */
-/* #undef HAVE_ISNAN */
+#define HAVE_ISNAN 1
 
+#if defined(HAVE_ACML) || defined(HAVE_MKL)
 /* Define if you have LAPACK library. */
-#define HAVE_LAPACK
+#  define HAVE_LAPACK 1
+#endif
 
 /* Define to 1 if you have the `lgamma' function. */
 /* #undef HAVE_LGAMMA */
@@ -128,7 +140,7 @@
 /* #undef HAVE_RINT */
 
 /* Define to 1 if you have the <stdint.h> header file. */
-#define HAVE_STDINT_H 1
+/* #undef HAVE_STDINT_H */
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
@@ -143,7 +155,7 @@
 /* #undef HAVE_STD_ISNAN */
 
 /* Define to 1 if you have the <strings.h> header file. */
-/* #undef HAVE_STRINGS_H */
+#define HAVE_STRINGS_H 1
 
 /* Define to 1 if you have the <string.h> header file. */
 #define HAVE_STRING_H 1
@@ -158,44 +170,67 @@
 /* #undef HAVE_TGAMMA */
 
 /* Define to 1 if you have the <unistd.h> header file. */
-/* #undef HAVE_UNISTD_H */
+#define HAVE_UNISTD_H 1
+
+/* Define if you use zdotusub_ Fortran wrapper. */
+/* #undef HAVE_ZDOTUSUB */
+
+/* Define if "void zdotu_()" should be used. */
+#define HAVE_ZDOTU_VOID 1
 
 /* Define if you want exceptions handling */
 /* #undef ITPP_EXCEPTIONS */
 
-/* Define to the sub-directory in which libtool stores uninstalled libraries.
-   */
-/* #undef LT_OBJDIR */
-
 /* Name of package */
-#define PACKAGE
+#define PACKAGE "itpp"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT
+#define PACKAGE_BUGREPORT "ediap@users.sourceforge.net"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME
+#define PACKAGE_NAME "IT++"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING
+#define PACKAGE_STRING "IT++ 4.0.0"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME
-
-/* Define to the home page for this package. */
-/* #undef PACKAGE_URL */
+#define PACKAGE_TARNAME "itpp"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION
+#define PACKAGE_VERSION "4.0.0"
+
+/* The size of `int', as computed by sizeof. */
+#define SIZEOF_INT 4
+
+/* The size of `long', as computed by sizeof. */
+#define SIZEOF_LONG 4
+
+/* The size of `long long', as computed by sizeof. */
+#define SIZEOF_LONG_LONG 8
+
+/* The size of `short', as computed by sizeof. */
+#define SIZEOF_SHORT 2
+
+/* The size of `unsigned int', as computed by sizeof. */
+#define SIZEOF_UNSIGNED_INT 4
+
+/* The size of `unsigned long', as computed by sizeof. */
+#define SIZEOF_UNSIGNED_LONG 4
+
+/* The size of `unsigned long long', as computed by sizeof. */
+#define SIZEOF_UNSIGNED_LONG_LONG 8
+
+/* The size of `unsigned short', as computed by sizeof. */
+#define SIZEOF_UNSIGNED_SHORT 2
 
 /* Define to 1 if you have the ANSI C header files. */
-/* #undef STDC_HEADERS */
+#define STDC_HEADERS 1
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 /* #undef TIME_WITH_SYS_TIME */
 
 /* Version number of package */
-/* #undef VERSION */
+#define VERSION "4.0.0"
 
 
 #if defined(HAVE_CMATH)
